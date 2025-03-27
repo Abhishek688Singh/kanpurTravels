@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archana Travells</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        body{
+          background-color:azure;
+        }
+        .arc{
+            border-radius: 50%;
+        }
+        .arct{
+            font-family: cursive;
+            font-size: 2rem;
+        }
+        .nav{
+            position:-webkit-sticky;
+            padding: 20px;
+        }
+        .bb{
+          margin-top: 20px;
+        }
+        .aa{
+          max-height: 700px;
+          max-width:"auto";
+          /* display: flex; */
+          
+        }
+        .ww{
+          margin-left: 20px;
+          
+        }
+        /* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.container {
+    transition: box-shadow 0.3s ease-in-out;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.display-4 {
+    color: #343a40;
+}
+
+.lead {
+    color: #6c757d;
+    line-height: 1.8;
+}
+
+/* Carousel */
+.carousel-item img {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .nav-link {
+    transition: color 0.3s;
+}
+
+footer .nav-link:hover {
+    text-decoration: underline;
+}
+
+#ll {
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border-radius: 10px;
+    padding: 20px;
+}
+.dark-mode #ll {
+    background-color: transparent;
+}
+
+
+   
+        
+
+    </style>
+
+</head>
+<body>
+    
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bb">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assist/logo/2Arc.png" alt="logo" width="50" height="50" class="arc">
+            </a>
+            <span class="navbar-brand arct">Archana Travels</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./AboutUs.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                            More..
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Review</a></li>
+                            <li><a class="dropdown-item" href="#">Write a review</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Book a ticket</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="./assist/logo/search.svg" width="30" height="30" class="arc" /> Search
+                    </button>
+                </form>
+                <!-- Dark Mode Toggle Button -->
+                <button id="theme-toggle" class="btn btn-dark">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const btn = document.getElementById("theme-toggle");
+    
+            if (document.body.classList.contains("dark-mode")) {
+                btn.textContent = "☀️ Light Mode";
+                btn.classList.replace("btn-dark", "btn-light");
+                localStorage.setItem("theme", "dark");
+            } else {
+                btn.textContent = "🌙 Dark Mode";
+                btn.classList.replace("btn-light", "btn-dark");
+                localStorage.setItem("theme", "light");
+            }
+        }
+    
+        // Apply previously saved theme on page load
+        window.onload = function () {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("theme-toggle").textContent = "☀️ Light Mode";
+                document.getElementById("theme-toggle").classList.replace("btn-dark", "btn-light");
+            }
+        };
+    
+        // Add event listener to the button
+        document.getElementById("theme-toggle").addEventListener("click", toggleDarkMode);
+    </script>
+    
+    <style>
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #121212 !important;
+            color: white !important;
+        }
+        .dark-mode .navbar {
+            background-color: #222 !important;
+        }
+        .dark-mode .nav-link, 
+        .dark-mode .navbar-brand {
+            color: white !important;
+        }
+        .dark-mode .dropdown-menu {
+            background-color: #333;
+            color: white;
+        }
+        .dark-mode .dropdown-item {
+            color: white !important;
+        }
+        .dark-mode .dropdown-item:hover {
+            background-color: #444;
+        }
+        .dark-mode .form-control {
+            background-color: #333;
+            color: white;
+            border: 1px solid white;
+        }
+        .dark-mode .btn-outline-success {
+            color: white;
+            border-color: white;
+        }
+        .dark-mode .btn-outline-success:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Set a Full-Screen Static Background */
+body::before {
+    content: "";
+    position: fixed;  /* Keep background fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./backgroung.jpg') no-repeat center center/cover !important;
+    z-index: -2;  /* Send it to the back */
+    opacity: 0.8; /* Adjust transparency if needed */
+}
+.dark-mode-featurette {
+    background: rgba(0, 0, 0, 0.5) !important ;  /* Semi-transparent black */
+    backdrop-filter: blur(5px);  /* Adds a smooth blur effect */
+    border-radius: 10px;  /* Optional: Rounds corners */
+    padding: 20px;  /* Optional: Adds spacing */
+}
+#carouselExampleCaptions {
+    animation: slide 2s infinite linear;
+}
+
+.carousel-inner .carousel-item {
+    transition: transform 2s ease-in-out;
+}
+
+.carousel-caption h5 {
+    font-size: 1.8rem; /* Bigger text */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #f8f9fa;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 10; /* Ensure it's above the image */
+}
+
+.carousel-caption:hover h5 {
+    transform: scale(1.1); /* Slightly enlarges */
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffdd57; /* Changes color on hover */
+}
+
+
+    </style>
+      
+     <!-- Kanpur places -->
+
+    
+     <nav style="--bs-breadcrumb-divider: '>'; " aria-label="breadcrumb">
+      <ol class="breadcrumb custom-breadcrumb">
+          <li class="breadcrumb-item">Asia</li>
+          <li class="breadcrumb-item active" aria-current="page">India</li>
+          <li class="breadcrumb-item active" aria-current="page">Uttar Pradesh</li>
+          <li class="breadcrumb-item active" aria-current="page">Kanpur</li>
+          <li class="breadcrumb-item active" aria-current="page">Places to visit in Kanpur</li>
+          <li class="breadcrumb-item active" aria-current="page">Landmarks</li>
+      </ol>
+  </nav>
+     <!-- '''''''' -->
+
+     <div class="ww">
+      <h1><span style="color:red;">Kanpur</span> Landmarks...</h1>
+     </div>
+
+      <!-- hero -->
+
+      <div class="bd-example m-0 border-0 "  >
+    
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+          <!-- <div id="carouselExampleAutoplaying"> -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="./assist/images/jk.temple/shri-radhakrishna-temple.jpg" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Shri Radhakrishna Temple</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="./assist/images/ISKCON Kanpur/iskcon-kanpur.jpg"  aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>ISKCON Kanpur</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/b7/f5/03/ganga-ji.jpg"  aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Brahmavart Ghat</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/07/d9/75/baba-anandeshwar-gate.jpg?w=800&h=600&s=1"  aria-label="Placeholder: Fourth slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Baba-Anandeshwar</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="./assist/images/Dwarkadhish Temple/dw.jpg"  aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Dwarkadhish Temple</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/d5/bc/f3/jain-glass-temple.jpg?w=2000&h=-1&s=1"  aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Jain-glass-temple</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 aa" style="border-radius: 20px;" width="me-auto" height="me-auto" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ec/86/c2/kanpur-memorial-church.jpg?w=2000&h=-1&s=1"  aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Kanpur-memorial-church</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- </div> -->
+      </div>
+      
+
+      <!-- <content> -->
+        <div class="container marketing dark-mode-featurette " style="margin-top: 50px;">
+
+          <!-- START THE FEATURETTES -->
+      
+          <hr  class="featurette-divider">
+      
+          <div onclick="redirectTo('./assist/images/Anandeshwar Temple/Anand.html')" class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">1. <a href="./assist/images/Anandeshwar Temple/Anand.html">Baba Anandeshwar Temple.</a><br /></h2>
+              <p class="lead">Most spiritual place to see lord shiv Mahadev in Kanpur near Ganga River, Everyone feels energetic fresh and calm at this temple.</p>
+            </div>
+            <div class="col-md-5">
+              <!-- <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%;" width="300" height="300" src="./assist/images/Anandeshwar Temple/4.jpg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" /><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect> -->
+              <img src="./assist/images/Anandeshwar Temple/2.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300px" style="border-radius: 30px; max-height: 300px; " loading="lazy"> 
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div onclick="redirectTo('./assist/images/Brahmavart Ghat/brahma.html')" class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">2. <a href="./assist/images/Brahmavart Ghat/brahma.html">Brahmavart Ghat</a><br /></h2>
+              <p class="lead">Being a religious place , very less known to people, it is peaceful, beautiful ghats of ganga, temple of religious significance.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="./assist/images/Anandeshwar Temple/4.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius: 30px; max-height: 300px;" loading="lazy"> 
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div onclick="redirectTo('./assist/images/Dwarkadhish Temple/Dwarka.html')" class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">3. <a href="./assist/images/Dwarkadhish Temple/Dwarka.html">Dwarkadhish Temple</a><br /></h2>
+              <p class="lead">Its a very beautiful holy place. The temple is dedicated t Lord Krishna.Its a very calm and holy place .<br /></p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/df/51/12/dwarkadhish-temple.jpg?w=2000&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius: 30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+
+          <div onclick="redirectTo('./assist/images/Green Park Stadium/greenpark.html')" class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">4. <a href="./assist/images/Green Park Stadium/greenpark.html">Green Park Stadium</a><br /></h2>
+              <p class="lead">Stadium is very nice i saw a match in this stadium india vs south africa the view of ground was good if you are sitting in balcony.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="./assist/images/Green Park Stadium/gpFront.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          <div onclick="redirectTo('./assist/images/hbtu/hbtu.html')"; class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">5. <a href="./assist/images/hbtu/hbtu.html">Harcourt Butler Technological Institute</a><br></h2>
+              <p class="lead">This is under very big university which is number 1 university in Uttar Pradesh. Lots of greenery can be seen here.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/cb/42/3c/p-20160903-160825-hdr.jpg?w=2000&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%;" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          <div onclick="redirectTo('./assist/images/ISKCON Kanpur/iscon.html')" class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">6. <a href="./assist/images/ISKCON Kanpur/iscon.html">ISKCON Kanpur</a><br /> </h2>
+              <p class="lead">Fabulous and peaceful place to visit in kanpur it is the best place to visit in kanpur with family or for couples .</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/70/64/49/radh-krishna.jpg?w=1800&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          
+          <div onclick="redirectTo('./assist/images/Jagannath/jagannath.html')" class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">7. <a href="./assist/images/Jagannath/jagannath.html">Jagannath Temple</a><br /></h2>
+              <p class="lead">This is heritage place which is very old as well full of art all around and natural things around this.<br />There was many devotees came on week ends day. Peaceful location. Temple was old but beautiful.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/6e/da/9e/img-20190922-095555-largejpg.jpg?w=1400&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%;" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          <div onclick="redirectTo('./assist/images/Jain Glass Temple/jain.html')" class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">8. <a href="./assist/images/Jain Glass Temple/jain.html">Jain Glass Temple</a><br /></h2>
+              <p class="lead">This is local sightseeing place, not a very big place but good to see at-least once t understand our culture.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/6d/f0/bf/una-parte-dell-interno.jpg?w=2000&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          <div onclick="redirectTo('./assist/images/jk.temple/jk.html')" class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">9. <a href="./assist/images/jk.temple/jk.html">Shri Radhakrishna Temple</a><br /></h2>
+              <p class="lead">One of the most beautiful temple in KANPUR. Excellent Architecture. Pleasant ambience. Well maintained and beautiful surroundings like garden, lighting, fountain and many more.. must visit at least once time in life. You feel peace their.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/25/72/b2/jk-temple.jpg?w=1400&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%;" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+          <div onclick="redirectTo('./assist/images/Kanpur Memorial Church/church.html')" class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">10. <a href="./assist/images/Kanpur Memorial Church/church.html">Kanpur Memorial Church</a><br /></h2>
+              <p class="lead">Kanpur Memorial Chruch is a holy place for Christians. It is open to anybody who wishes to visit and pray.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ec/7f/bc/kanpur-memorial-church.jpg?w=2000&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius: 10px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%"; width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+
+
+          <div onclick="redirectTo('./assist/images/Valmiki Ashram/Valmiki.html')" class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">11. <a href="./assist/images/Valmiki Ashram/Valmiki.html">Valmiki Ashram Temple</a><br /></h2>
+              <p class="lead">This ashram is so good to see and architecture is like fort. Nice and very cleanliness. Very peaceful place it is.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/ac/2a/2b/valmiki-ashram-temple.jpg?w=1400&h=-1&s=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" style="border-radius:30px; max-height: 300px;" loading="lazy"> 
+
+              <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 30%;" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <!-- /END THE FEATURETTES -->
+      
+        </div>
+
+
+        <div style="height: 800px; width: 500px; "></div>
+
+
+
+
+        <!-- <detail> -->
+
+
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="margin: 20px;">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="./assist/logo/ARCHANA.png" class="d-block mx-lg-auto img-fluid dark-mode-img" 
+                     alt="Bootstrap Themes" width="500" height="300" style="border-radius: 10px;" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 dark-mode-text">
+                    Travellers' Choice Awards Best of the Best
+                </h1>
+                <p class="lead fw-bold dark-mode-text">
+                    Among our top 1% of places, stays, eats, and experiences—decided by you.
+                </p>
+                <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+                  <button onclick="redirectTo('./error.html')" class="custom-btn primary-btn">
+                      🚀 Plan a Trip
+                  </button>
+                  <button onclick="redirectTo('./AboutUs.html')" class="custom-btn outline-btn">
+                      ℹ️ About Us
+                  </button>
+              </div>
+            </div>
+        </div>
+        
+
+
+        
+        
+        <!-- <footer> -->
+
+          <div id="ll" class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-4 my-4 border-top  nn footer-container">
+                <div class="col mb-3">
+                    <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img class="arc footer-logo" width="180" height="180" src="./assist/logo/ARCHANA.png" />
+                    </a>
+                    <p class="text-body-secondary footer-text">© 2025 Archana Travels</p>
+                </div>
+        
+                <div class="col mb-3"></div>
+        
+                <div class="col mb-3">
+                    <h5>🌍 Archana Travels</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 footer-link">🏠 Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">✨ Facilities</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">🚗 Trips</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">🎟️ Ticket</a></li>
+                    </ul>
+                </div>
+        
+                <div class="col mb-3">
+                    <h5>🔎 Explore</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="./AboutUs.html" class="nav-link p-0 footer-link">ℹ️ About</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">✍️ Write a Review</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">🤝 Join</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">❓ FAQs</a></li>
+                    </ul>
+                </div>
+        
+                <div class="col mb-3">
+                    <h5>📈 Do Business With Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="./AboutUs.html" class="nav-link p-0 footer-link">🏢 Owners</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">💼 Business Advantages</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">📅 Book a Tour</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+              
+        
+
+          <script>
+            
+
+            function redirectTo(url) {
+                window.location.href = url;
+            }
+        </script>
+    <!-- <script src="./index..js" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+document.addEventListener("DOMContentLoaded", function () {
+    let myCarousel = new bootstrap.Carousel(document.querySelector("#carouselExampleCaptions"), {
+        interval: 1000, // Auto-slide every 2 seconds
+        pause: "false", // Ensures it does not stop on hover
+        wrap: true, // Keeps looping through images
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Archana Travels</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Logo */
+        .logo img {
+            width: 80px;  /* Adjust size */
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x700/?travel,nature') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            color: #0077b6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            background: #e3f2fd;
+        }
+
+        .team-member {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            color: #0077b6;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 40px;
+            background: #0077b6;
+            color: white;
+        }
+
+        .contact a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                font-size: 2rem;
+            }
+            .about p {
+                font-size: 1rem;
+            }
+            .header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Logo -->
+    <div class="header">
+        <div class="logo">
+            <img src="./assist/logo/ARCHANA.png" alt="Archana Travels Logo">
+        </div>
+        <div>Archana Travels</div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">Explore the World with Us</div>
+
+    <!-- About Section -->
+    <div class="about">
+        <h2>Who We Are</h2>
+        <p>Archana Travels is your trusted partner for unforgettable journeys. Whether it's a serene beach getaway, a thrilling adventure, or a cultural exploration, we bring your travel dreams to life. With years of experience, we ensure seamless experiences, personalized itineraries, and hassle-free adventures.</p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team">
+        <div class="team-member">
+            <!-- <img src="https://source.unsplash.com/100x100/?man,face" alt="CEO"> -->
+            <h3>Abhishek Singh</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <!-- <img src="https://source.unsplash.com/100x100/?woman,face" alt="Manager"> -->
+            <h3>Neha Sharma</h3>
+            <p>Travel Manager</p>
+        </div>
+        <div class="team-member">
+            <!-- <img src="https://source.unsplash.com/100x100/?man,travel" alt="Guide"> -->
+            <h3>Ravi Kumar</h3>
+            <p>Tour Guide</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:singh752007abhishek@gmail.com">info@archanatravels.com</a></p>
+        <p>Phone: +91 7906215489</p>
+        <p>Address: 123, Travel Street, Kanpur, India</p>
+    </div>
+
+</body>
+</html>

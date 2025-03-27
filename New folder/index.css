@@ -1,0 +1,608 @@
+/* Default Light Mode Background */
+.featurette {
+    background-color: #f8f9fa; /* Soft light gray */
+    padding: 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode Background */
+.dark-mode .featurette {
+    background-color: #1c1c1c; /* Dark gray for contrast */
+    color: #e0e0e0; /* Light text for better readability */
+    border:1px solid #e0e0e0;
+}
+
+/* Text Styles */
+.featurette h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s ease-in-out;
+}
+.featurette h2 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+.featurette h2 a:hover {
+    color: #ff9800;
+}
+.featurette p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.featurette img {
+    border-radius: 20px;
+    max-height: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.featurette img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Text Adjustments */
+.dark-mode .featurette h2 {
+    color: #ddd;
+}
+.dark-mode .featurette p {
+    color: #bbb;
+}
+.dark-mode .featurette h2 a {
+    color: #ff9800;
+}
+.dark-mode .featurette h2 a:hover {
+    color: #ffc107;
+}
+.dark-mode .featurette img {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Default Light Mode Styles */
+.dark-mode-featurette {
+    background-color: #f8f9fa; /* Light background */
+    padding: 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.dark-mode .row:hover {
+    box-shadow: 0px 4px 10px #f8f9fa;
+    border-radius: 30px;
+}
+
+/* Dark Mode Styles */
+.dark-mode .dark-mode-featurette {
+    background-color: #1c1c1c; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Featurette Text */
+.dark-mode-featurette h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s ease-in-out;
+}
+.dark-mode-featurette h2 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+.dark-mode-featurette h2 a:hover {
+    color: #ff9800;
+}
+.dark-mode-featurette p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.dark-mode-featurette img {
+    border-radius: 20px;
+    max-height: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.dark-mode-featurette img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .dark-mode-featurette h2 {
+    color: #ddd;
+}
+.dark-mode .dark-mode-featurette p {
+    color: #bbb;
+}
+.dark-mode .dark-mode-featurette h2 a {
+    color: #ff9800;
+}
+.dark-mode .dark-mode-featurette h2 a:hover {
+    color: #ffc107;
+}
+.dark-mode .dark-mode-featurette img {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+  .row a:hover {
+    background-size: 400% 100%;
+    animation-duration: 1.5s;
+  }
+
+
+  .row {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.row:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+   */
+
+   /* External Stylesheet - Enhanced UI CSS */
+
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Hero Section */
+.container {
+    transition: box-shadow 0.3s ease-in-out;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.display-4 {
+    color: #343a40;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.lead {
+    color: #6c757d;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Carousel */
+.carousel-item img {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+footer .nav-link {
+    color: #343a40;
+    transition: color 0.3s;
+}
+
+footer .nav-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+.custom-breadcrumb {
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light mode background */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .form-control {
+    background-color: #333;
+    color: white !important; /* Ensures text inside input is visible */
+    border: 1px solid white;
+}
+
+.dark-mode .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light gray placeholder text */
+}
+
+.dark-mode .form-control:focus {
+    background-color: #444; /* Slightly lighter background when typing */
+    color: white;
+    border-color: #ddd;
+}
+
+.dark-mode .btn-outline-success img {
+    filter: invert(1); /* Inverts colors to make dark icons white */
+}
+
+
+.btn-outline-success img {
+    filter: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #777; /* Light mode */
+}
+
+.breadcrumb-item {
+    color: #555;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Dark Mode Styles */
+.dark-mode .custom-breadcrumb {
+    background-color: #222; /* Dark mode background */
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .breadcrumb-item {
+    color: #ccc !important;
+}
+
+.dark-mode .breadcrumb-item.active {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.dark-mode .carousel-item img {
+    filter: brightness(0.8) contrast(1.2); /* Darkens images slightly */
+}
+
+
+.dark-mode .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adds slight overlay */
+    z-index: 1;
+}
+
+
+.dark-mode .carousel-caption {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* Dark Mode Text */
+.dark-mode .dark-mode-text {
+    color: white !important;
+}
+
+/* Dark Mode Image Optimization */
+.dark-mode .dark-mode-img {
+    filter: brightness(0.8) contrast(1.2);
+}
+
+/* Dark Mode Buttons */
+.dark-mode .dark-mode-btn {
+    background-color: #007bff !important; /* Adjust primary button */
+    border-color: #007bff !important;
+    color: white !important;
+}
+
+.dark-mode .dark-mode-btn:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Dark Mode Outline Button */
+.dark-mode .dark-mode-btn-outline {
+    color: white !important;
+    border-color: white !important;
+}
+
+.dark-mode .dark-mode-btn-outline:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+
+
+.custom-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Primary Button */
+.primary-btn {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.primary-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #003580);
+    transform: scale(1.05);
+}
+
+/* Outline Button */
+.outline-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.outline-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .primary-btn {
+    background: linear-gradient(45deg, #ff9800, #e65100);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+.dark-mode .primary-btn:hover {
+    background: linear-gradient(45deg, #e65100, #bf360c);
+}
+
+.dark-mode .outline-btn {
+    color: #ff9800;
+    border-color: #ff9800;
+}
+
+.dark-mode .outline-btn:hover {
+    background-color: #ff9800;
+    color: white;
+}
+
+.footer-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Footer Logo */
+.footer-logo {
+    filter: brightness(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Footer Links */
+.footer-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Dark Mode */
+.dark-mode .footer-container {
+    background-color: #222;
+    color: white;
+    border-top: 1px solid #444;
+}
+.dark-mode #ll{
+    background-color: #222;
+}
+.dark-mode .footer-text {
+    color: #bbb;
+}
+.dark-mode .footer-link {
+    color: #bbb;
+}
+.dark-mode .footer-link:hover {
+    color: #ff9800;
+}
+.dark-mode .footer-logo {
+    filter: brightness(1);
+}
+
+
+/* ------------------------------------------ */
+
+/* Custom Button Styling */
+.custom-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 10px;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Featurette Image Hover Effect */
+.featurette-image {
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.featurette-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* Featurette Section Styling */
+.featurette {
+    background-color: #f8f9fa; /* Light mode background */
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.featurette:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Heading & Text Styling */
+.featurette h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.3s ease-in-out;
+}
+.featurette h2 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+.featurette h2 a:hover {
+    color: #ff9800;
+}
+.featurette p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.featurette img {
+    border-radius: 20px;
+    max-height: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.featurette img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Support */
+.dark-mode .featurette {
+    background-color: #1c1c1c;
+}
+.dark-mode .featurette h2 {
+    color: #ddd;
+}
+.dark-mode .featurette p {
+    color: #bbb;
+}
+.dark-mode .featurette h2 a {
+    color: #ff9800;
+}
+.dark-mode .featurette h2 a:hover {
+    color: #ffc107;
+}
+.dark-mode .featurette img {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+
+
